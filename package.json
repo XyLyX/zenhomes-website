@@ -1,5 +1,5 @@
 {
-  "name": "zh-vault-functions",
+  "name": "zenhomes-site",
   "private": true,
   "dependencies": {
     "@netlify/blobs": "^8.1.0"
