@@ -1,0 +1,132 @@
+/* ============================================================
+   Zen Homes — Insights extension stylesheet
+   Loads AFTER styles.css and reuses its tokens (--ink, --turquoise,
+   --cream, --display, --sans, --mono, etc.) rather than
+   defining a new palette. Only new components live here.
+
+   Signature idea, tied to the brand's own stated principle
+   ("Data-Driven: every claim is grounded in verifiable market
+   data") — every figure in these guides is marked as DATA
+   (turquoise, the brand's own accent) or MARKET CLAIM (muted, no
+   accent) so the distinction the brand already claims to make
+   is visibly demonstrated, not just asserted.
+   ============================================================ */
+
+.insight-hero .lede{ max-width: 680px; }
+
+.crumb{
+  max-width: 720px; margin: 0 auto; padding: 40px 8vw 0;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--text-dim);
+}
+.crumb a{ color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--turquoise-faint); }
+.crumb a:hover{ color: var(--turquoise-deep); }
+
+.insight-body{
+  max-width: 720px; margin: 0 auto; padding: 40px 8vw 20px; background: var(--cream);
+  font-size: 16px; line-height: 1.8; color: var(--ink);
+}
+.insight-body h2{
+  font-family: var(--display); font-weight: 400; font-size: 26px;
+  margin: 48px 0 18px; padding-top: 28px; border-top: 1px solid var(--turquoise-faint);
+  color: var(--ink);
+}
+.insight-body h3{ font-family: var(--display); font-size: 19px; font-weight: 500; margin: 30px 0 10px; }
+.insight-body p{ margin: 0 0 20px; }
+.insight-body ul, .insight-body ol{ margin: 0 0 20px; padding-left: 22px; }
+.insight-body li{ margin-bottom: 8px; }
+.insight-body strong{ color: var(--ink); font-weight: 600; }
+
+/* the DATA / MARKET CLAIM signature */
+.tag{
+  display: inline-block; font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: .1em; text-transform: uppercase; padding: 2px 8px;
+  border-radius: 2px; vertical-align: 2px; margin-right: 8px; white-space: nowrap;
+}
+.tag-data{ color: var(--turquoise-deep); border: 1px solid var(--turquoise); background: var(--turquoise-faint); }
+.tag-claim{ color: var(--text-dim); border: 1px solid var(--line-strong); background: transparent; }
+
+/* tables */
+.insight-body table{ width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14.5px; }
+.insight-body th, .insight-body td{ text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--turquoise-faint); }
+.insight-body th{
+  font-family: var(--mono); font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--text-dim); font-weight: 500;
+}
+.insight-body tr:last-child td{ border-bottom: none; }
+
+/* mid-article advisory note (echoes .listings-note) */
+.insight-note{
+  max-width: 720px; margin: 32px auto; padding: 24px 28px;
+  border-left: 2px solid var(--turquoise-deep); background: var(--turquoise-faint);
+  font-size: 14.5px; line-height: 1.75; color: var(--text-dim);
+}
+.insight-note strong{ color: var(--ink); }
+
+/* related guides */
+.related-wrap{ max-width: 720px; margin: 0 auto; padding: 20px 8vw 60px; }
+.related-wrap .eyebrow{ text-align: left; }
+.related-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 8px; }
+.related-card{
+  display: block; text-decoration: none; padding: 20px; border: 1px solid var(--turquoise-faint);
+  background: rgba(255,255,255,0.3); transition: border-color .3s ease;
+}
+.related-card:hover{ border-color: var(--turquoise-deep); }
+.related-cat{
+  display: block; font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--turquoise-deep); margin-bottom: 8px;
+}
+.related-title{ font-family: var(--display); font-size: 16px; color: var(--ink); }
+
+/* faq */
+.faq-section{ max-width: 720px; margin: 0 auto; padding: 0 8vw 20px; }
+.faq-section .eyebrow{ text-align: left; }
+.faq-section h3{ font-family: var(--display); font-size: 17px; font-weight: 500; margin: 26px 0 8px; color: var(--ink); }
+.faq-section p{ font-size: 14.5px; color: var(--text-dim); line-height: 1.75; }
+
+/* disclaimer */
+.disclaimer{
+  max-width: 720px; margin: 0 auto; padding: 24px 8vw 50px; font-size: 12.5px;
+  line-height: 1.75; color: var(--text-dim); border-top: 1px solid var(--turquoise-faint); margin-top: 20px; padding-top: 24px;
+}
+
+/* hub: filter bar */
+.insight-index{ background: var(--cream); padding: 90px 8vw 0; }
+.filter-bar{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.filter-bar input{ display: none; }
+.filter-bar label{
+  font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+  border: 1px solid var(--turquoise-faint); padding: 8px 16px; cursor: pointer; user-select: none;
+  color: var(--text-dim); transition: all .25s ease;
+}
+.filter-bar input:checked + label{ background: var(--ink); color: var(--white); border-color: var(--ink); }
+
+/* hub: index list, echoes .ledger-row */
+.index-list{ border-top: 1px solid var(--turquoise-faint); padding: 20px 0 40px; }
+.index-row{
+  display: flex; align-items: baseline; gap: 18px; padding: 26px 0;
+  border-bottom: 1px solid var(--turquoise-faint); flex-wrap: wrap;
+}
+.index-name{
+  font-family: var(--display); font-size: 19px; font-weight: 500; flex-shrink: 0;
+  min-width: 260px;
+}
+.index-name a{ text-decoration: none; color: var(--ink); transition: color .3s ease; }
+.index-name a:hover{ color: var(--turquoise-deep); }
+.index-leader{ flex: 1; border-bottom: 1px dotted var(--turquoise); min-width: 20px; align-self: center; }
+.index-text{ font-size: 13.5px; line-height: 1.65; color: var(--text-dim); max-width: 42ch; }
+@media (max-width: 800px){
+  .index-row{ flex-direction: column; align-items: flex-start; gap: 8px; }
+  .index-leader{ display: none; }
+  .index-name{ min-width: 0; }
+}
+
+/* newsletter form, sits inside the now-light .trajectory section */
+.newsletter-form{ display: flex; align-items: center; gap: 12px; max-width: 440px; margin: 40px auto 0; flex-wrap: wrap; justify-content: center; }
+.newsletter-form input[type=email]{
+  flex: 1; min-width: 200px; padding: 13px 14px; border: 1px solid var(--line-strong); height: 48px;
+  background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 14px; box-sizing: border-box;
+}
+.newsletter-form input[type=email]::placeholder{ color: var(--text-dim-2); }
+.newsletter-form button{ white-space: nowrap; height: 48px; margin-top: 0; opacity: 1; animation: none; }
+.hp-field{ position: absolute; left: -9999px; }

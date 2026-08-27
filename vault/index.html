@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault | Zen Homes</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/vault/vault.css">
+</head>
+<body>
+
+<nav id="siteNav">
+  <a href="/" class="wordmark"><span class="mark">Z<span class="slice"></span>H</span><span class="word">ZEN HOMES</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Site</a></li>
+    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/vault/logout">Log Out</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero" style="padding-bottom:60px;">
+  <span class="eyebrow">Private Vault</span>
+  <h1>Your Documents, Kept Close.</h1>
+  <p class="lede">Saved here for your own reference — visible only to you, unless you generate a client share link.</p>
+</header>
+
+<section class="vault-section">
+
+  <div class="vault-upload-card reveal-up">
+    <h2>Save a Document</h2>
+    <div class="upload-row">
+      <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.png,.jpg,.jpeg">
+      <select id="categoryInput">
+        <option>Investor Guides</option>
+        <option>Client Proposals</option>
+        <option>Project Brochures</option>
+        <option>Personal Notes</option>
+        <option>Uncategorised</option>
+      </select>
+      <button id="uploadBtn" class="cta solid">Save to Vault</button>
+    </div>
+    <p class="upload-hint">Documents up to 4MB each. PDFs, Word, Excel, PowerPoint, and images.</p>
+    <p class="upload-status" id="uploadStatus"></p>
+  </div>
+
+  <div class="vault-list-wrap">
+    <h2>Saved Documents</h2>
+    <div id="docList" class="doc-list"><p class="empty-note">Loading…</p></div>
+  </div>
+
+</section>
+
+<div class="share-modal" id="shareModal">
+  <div class="share-modal-card">
+    <h3>Client Share Link</h3>
+    <p>Anyone with this link can view this document. No password required. It expires in 30 days.</p>
+    <div class="share-link-row">
+      <input type="text" id="shareLinkInput" readonly>
+      <button id="copyLinkBtn" class="cta solid">Copy</button>
+    </div>
+    <div class="share-modal-actions">
+      <button id="revokeShareBtn" class="cta">Revoke Link</button>
+      <button id="closeShareBtn" class="cta">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-tag">Where Wealth Finds Its Address.</div>
+    <div class="footer-contact">
+      <a href="mailto:hello@zenhomesglobal.com">hello@zenhomesglobal.com</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Zen Homes. All rights reserved.</span>
+    <span>Private — Not for Public Access</span>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<script src="/vault/vault.js"></script>
+</body>
+</html>

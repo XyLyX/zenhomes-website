@@ -1,0 +1,18 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+[[edge_functions]]
+  path = "/vault/*"
+  function = "vault-gate"
+
+# Pretty client share links (/vault/shared/<token>) map to the public
+# function that serves the file. Token is passed as a path segment (via the
+# splat) rather than a query string parameter — Netlify's support for named
+# placeholders substituted into a destination's query string has a history
+# of bugs; splat-to-path substitution is the well-established, reliable one.
+[[redirects]]
+  from = "/vault/shared/*"
+  to = "/.netlify/functions/vault-shared/:splat"
+  status = 200
+  force = true
