@@ -22,6 +22,13 @@
 .crumb a{ color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--turquoise-faint); }
 .crumb a:hover{ color: var(--turquoise-deep); }
 
+.byline{
+  max-width: 720px; margin: 0 auto 28px; padding: 0 8vw;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
+  color: var(--text-dim);
+}
+.byline strong{ color: var(--ink); font-weight: 500; }
+
 .insight-body{
   max-width: 720px; margin: 0 auto; padding: 40px 8vw 20px; background: var(--cream);
   font-size: 16px; line-height: 1.8; color: var(--ink);

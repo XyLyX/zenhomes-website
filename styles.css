@@ -152,10 +152,16 @@ h1 .line:nth-child(1) span{ animation-delay: .35s; }
 h1 .line:nth-child(2) span{ animation-delay: .48s; }
 h1 .line:nth-child(3) span{ animation-delay: .61s; }
 h1 em{ font-style: normal; font-weight: 700; color: var(--turquoise-deep); }
+.tagline-lead{
+  font-family: var(--display); font-weight: 400; font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px); color: var(--text-dim); margin-top: 24px;
+  max-width: 520px;
+  opacity:0; transform: translateY(10px); animation: reveal .9s ease .72s forwards;
+}
 .tagline{
   font-family: var(--sans); font-weight: 400; font-size: 16px;
-  color: var(--text-dim); margin-top: 26px;
-  opacity:0; transform: translateY(10px); animation: reveal .9s ease .85s forwards;
+  color: var(--text-dim); margin-top: 14px;
+  opacity:0; transform: translateY(10px); animation: reveal .9s ease .92s forwards;
 }
 .cta{
   display:inline-block; margin-top: 40px; padding: 15px 30px;
