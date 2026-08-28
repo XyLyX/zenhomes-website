@@ -137,3 +137,4 @@
 .newsletter-form input[type=email]::placeholder{ color: var(--text-dim-2); }
 .newsletter-form button{ white-space: nowrap; height: 48px; margin-top: 0; opacity: 1; animation: none; }
 .hp-field{ position: absolute; left: -9999px; }
+#newsletterStatus{ max-width: 440px; margin-left: auto; margin-right: auto; }

@@ -128,12 +128,13 @@
   <span class="eyebrow reveal-up">Stay Informed</span>
   <blockquote class="reveal-up">Receive our market intelligence directly, before it becomes urgent.</blockquote>
   <p class="lede reveal-up">A considered monthly note on UAE market movement. No promotional inventory, unsubscribe at any time.</p>
-  <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="botfield" class="newsletter-form reveal-up">
+  <form id="newsletterForm" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="botfield" class="newsletter-form reveal-up">
     <input type="hidden" name="form-name" value="newsletter">
     <p class="hp-field"><label>Leave blank: <input name="botfield"></label></p>
     <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
     <button type="submit" class="cta solid">Subscribe</button>
   </form>
+  <p class="form-status" id="newsletterStatus"></p>
 </section>
 
 

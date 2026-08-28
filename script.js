@@ -99,3 +99,33 @@ ${message}`;
     });
   });
 }
+
+// Newsletter form: submits natively to Netlify Forms, same as the contact form, and shows
+// an inline confirmation instead of navigating away to Netlify's default success page.
+const newsletterForm = document.getElementById('newsletterForm');
+if(newsletterForm){
+  newsletterForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const status = document.getElementById('newsletterStatus');
+    const formData = new FormData(newsletterForm);
+    const encoded = new URLSearchParams(formData).toString();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encoded
+    }).then((res) => {
+      if(!res.ok) throw new Error('Form endpoint unavailable');
+      if(status){
+        status.textContent = "You're on the list — look out for our next market note.";
+        status.classList.add('show');
+      }
+      newsletterForm.reset();
+    }).catch(() => {
+      if(status){
+        status.textContent = 'Something went wrong. Email hello@zenhomesglobal.com and we\'ll add you directly.';
+        status.classList.add('show');
+      }
+    });
+  });
+}
