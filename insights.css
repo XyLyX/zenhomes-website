@@ -70,6 +70,28 @@
 }
 .insight-note strong{ color: var(--ink); }
 
+/* hero + gallery imagery */
+.insight-body .hero-image{
+  width: 100%; height: auto; display: block; border-radius: 3px;
+  margin: 8px 0 32px; border: 1px solid var(--line);
+}
+.photo-grid{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin: 20px 0 32px;
+}
+.photo-grid figure{ margin: 0; }
+.photo-grid img{
+  width: 100%; height: 210px; object-fit: cover; display: block;
+  border-radius: 3px; border: 1px solid var(--line);
+}
+.photo-grid figcaption{
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--text-dim); margin-top: 7px;
+}
+@media (max-width: 720px){
+  .photo-grid{ grid-template-columns: 1fr; }
+}
+
 /* related guides */
 .related-wrap{ max-width: 720px; margin: 0 auto; padding: 20px 8vw 60px; }
 .related-wrap .eyebrow{ text-align: left; }
