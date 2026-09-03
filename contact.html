@@ -44,7 +44,7 @@
 <header class="page-hero">
   <span class="eyebrow">Contact</span>
   <h1>Begin a Private Consultation.</h1>
-  <p class="lede">Every relationship begins with a conversation, not a listing. Share a few details and a member of our advisory team will respond directly and discreetly.</p>
+  <p class="lede">Every relationship begins with a conversation, not a listing. The questions below aren't paperwork — they're how our advisers understand a mandate before the first call, so that conversation starts already informed. The specifics stay for the call; here, ranges are enough.</p>
 </header>
 
 <section class="thesis" style="padding-top:0;">
@@ -68,56 +68,157 @@
     </div>
 
     <div class="form-card reveal-up">
-      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="company">
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact">
-        <div class="field-row">
-          <div class="field">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+
+        <div class="form-group">
+          <div class="form-group-head">
+            <span class="form-group-label">Who's Reaching Out</span>
           </div>
-          <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
           </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="phone">Phone (with country code)</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-          <div class="field">
-            <label for="interest">Area of Interest</label>
-            <select id="interest" name="interest" required>
-              <option value="" disabled selected hidden>Select an option</option>
-              <option>Luxury Residences</option>
-              <option>Portfolio Investment</option>
-              <option>Family Office Advisory</option>
-              <option>NRI / International Buyer</option>
-              <option>Leasing / Tenancy</option>
-              <option>Commercial Space / Plots / Land</option>
-              <option>Other</option>
-            </select>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone (with country code)</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="field">
+              <label for="company">Company / Family Office<span class="field-optional">Optional</span></label>
+              <input type="text" id="company" name="company" autocomplete="off">
+            </div>
           </div>
         </div>
-        <div class="field">
-          <label for="category">Category</label>
-          <select id="category" name="category" required>
-            <option value="" disabled selected hidden>Select an option</option>
-            <option>Off Plan</option>
-            <option>Ready Property</option>
-          </select>
+
+        <div class="form-group">
+          <div class="form-group-head">
+            <span class="form-group-label">The Mandate</span>
+            <p class="form-group-sub">Ranges, not figures. Enough for our team to prepare — precision is what the conversation is for.</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="portfolio_size">Portfolio Size</label>
+              <select id="portfolio_size" name="portfolio_size" required>
+                <option value="" disabled selected hidden>Select a range</option>
+                <option value="Under AED 5M">Under AED 5M</option>
+                <option value="AED 5-15M">AED 5–15M</option>
+                <option value="AED 15-50M">AED 15–50M</option>
+                <option value="AED 50-100M">AED 50–100M</option>
+                <option value="AED 100M+">AED 100M+</option>
+                <option value="Prefer to discuss directly">Prefer to discuss directly</option>
+              </select>
+              <p class="field-hint">Current holdings, broadly.</p>
+            </div>
+            <div class="field">
+              <label for="investment_range">Investment Range</label>
+              <select id="investment_range" name="investment_range" required>
+                <option value="" disabled selected hidden>Select a range</option>
+                <option value="Under AED 2M">Under AED 2M</option>
+                <option value="AED 2-5M">AED 2–5M</option>
+                <option value="AED 5-15M">AED 5–15M</option>
+                <option value="AED 15-50M">AED 15–50M</option>
+                <option value="AED 50M+">AED 50M+</option>
+                <option value="Not yet defined">Not yet defined</option>
+              </select>
+              <p class="field-hint">For this mandate specifically.</p>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="hold_period">Hold Period</label>
+              <select id="hold_period" name="hold_period" required>
+                <option value="" disabled selected hidden>Select a range</option>
+                <option value="Under 2 years">Under 2 years</option>
+                <option value="2-5 years">2–5 years</option>
+                <option value="5-10 years">5–10 years</option>
+                <option value="10+ years">10+ years</option>
+                <option value="Indefinite / legacy hold">Indefinite / legacy hold</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="liquidity_timeframe">Liquidity / Timeframe</label>
+              <select id="liquidity_timeframe" name="liquidity_timeframe" required>
+                <option value="" disabled selected hidden>Select a timeframe</option>
+                <option value="Ready to act now">Ready to act now</option>
+                <option value="Within 3 months">Within 3 months</option>
+                <option value="Within 6-12 months">Within 6–12 months</option>
+                <option value="Exploratory / No fixed timeline">Exploratory, no fixed timeline</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="target_return">Target Return<span class="field-optional">Optional</span></label>
+              <select id="target_return" name="target_return">
+                <option value="" disabled selected hidden>Select an option</option>
+                <option value="Capital preservation">Capital preservation</option>
+                <option value="Income-focused (yield)">Income-focused (yield)</option>
+                <option value="Balanced growth and income">Balanced growth and income</option>
+                <option value="Capital appreciation-led">Capital appreciation-led</option>
+                <option value="Not yet defined">Not yet defined</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="objective">What You Need</label>
+              <select id="objective" name="objective" required>
+                <option value="" disabled selected hidden>Select an option</option>
+                <option value="Acquisition">Acquisition — new positions</option>
+                <option value="Exit">Exit — disposal of existing holdings</option>
+                <option value="Ongoing Management">Ongoing portfolio management</option>
+                <option value="Undecided">Not sure yet — want to talk it through</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+
+        <div class="form-group">
+          <div class="form-group-head">
+            <span class="form-group-label">Context</span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="interest">Area of Interest</label>
+              <select id="interest" name="interest" required>
+                <option value="" disabled selected hidden>Select an option</option>
+                <option>Luxury Residences</option>
+                <option>Portfolio Investment</option>
+                <option>Family Office Advisory</option>
+                <option>NRI / International Buyer</option>
+                <option>Off-Market Access</option>
+                <option>Leasing / Tenancy</option>
+                <option>Commercial Space / Plots / Land</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="property_category">Property Category<span class="field-optional">If acquiring</span></label>
+              <select id="property_category" name="property_category">
+                <option value="Not applicable" selected>Not applicable</option>
+                <option value="Off Plan">Off Plan</option>
+                <option value="Ready Property">Ready Property</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Anything Else<span class="field-optional">Optional</span></label>
+            <textarea id="message" name="message"></textarea>
+          </div>
         </div>
+
         <!-- honeypot field to deter simple bots -->
         <div class="hp-field">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+          <label for="bot-field">Leave this field blank</label>
+          <input type="text" id="bot-field" name="bot-field" tabindex="-1" autocomplete="off">
         </div>
         <button type="submit" class="submit-btn">Send Enquiry</button>
-        <p class="form-note">Submitting opens your email client with this enquiry addressed to hello@zenhomesglobal.com, so nothing is sent without your confirmation.</p>
+        <p class="form-note">Submitting sends this directly and discreetly to our advisory team. No listings, no marketing follow-up — a member of the team will respond personally.</p>
         <p class="form-status" id="formStatus"></p>
       </form>
     </div>

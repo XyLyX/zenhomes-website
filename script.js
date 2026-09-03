@@ -62,7 +62,15 @@ if(contactForm){
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const company = document.getElementById('company').value.trim();
+    const portfolioSize = document.getElementById('portfolio_size').value;
+    const investmentRange = document.getElementById('investment_range').value;
+    const holdPeriod = document.getElementById('hold_period').value;
+    const liquidity = document.getElementById('liquidity_timeframe').value;
+    const targetReturn = document.getElementById('target_return').value;
+    const objective = document.getElementById('objective').value;
     const interest = document.getElementById('interest').value;
+    const propertyCategory = document.getElementById('property_category').value;
     const message = document.getElementById('message').value.trim();
 
     const formData = new FormData(contactForm);
@@ -86,9 +94,19 @@ if(contactForm){
 `Name: ${name}
 Email: ${email}
 Phone: ${phone}
-Area of Interest: ${interest}
+Company / Family Office: ${company}
 
-Message:
+What They Need: ${objective}
+Portfolio Size: ${portfolioSize}
+Investment Range: ${investmentRange}
+Hold Period: ${holdPeriod}
+Liquidity / Timeframe: ${liquidity}
+Target Return: ${targetReturn}
+
+Area of Interest: ${interest}
+Property Category: ${propertyCategory}
+
+Anything Else:
 ${message}`;
       const mailto = `mailto:hello@zenhomesglobal.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       if(status){

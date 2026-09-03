@@ -327,6 +327,14 @@ blockquote{
 .form-status.show{ display:block; }
 .hp-field{ position:absolute; left:-9999px; }
 
+.form-group{ margin-bottom: 34px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.form-group:last-of-type{ border-bottom: none; padding-bottom: 0; }
+.form-group-head{ margin-bottom: 18px; }
+.form-group-label{ font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--turquoise-deep); display:block; margin-bottom: 6px; }
+.form-group-sub{ font-size: 12.5px; line-height: 1.7; color: var(--text-dim-2); max-width: 46ch; }
+.field-optional{ font-family: var(--sans); font-size: 9px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim-2); margin-left: 6px; }
+.field-hint{ font-size: 11.5px; color: var(--text-dim-2); margin-top: 6px; line-height: 1.5; }
+
 /* ---------- FOOTER ---------- */
 footer{ background: var(--cream); color: var(--ink); border-top: 1px solid var(--line); }
 .footer-top{ display:flex; justify-content: space-between; align-items:flex-end; flex-wrap: wrap; gap: 40px; padding-bottom: 56px; border-bottom: 1px solid var(--line); }
