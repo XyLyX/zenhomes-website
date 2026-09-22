@@ -119,6 +119,14 @@ ${message}`;
 }
 
 // Share bar: copy-link button (LinkedIn/WhatsApp/X are plain share-intent links, no JS needed)
+
+// WhatsApp icon button: no href, so the number never shows in a link-hover preview
+document.querySelectorAll('.whatsapp-icon-link[data-wa]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    window.open('https://wa.me/' + btn.getAttribute('data-wa'), '_blank', 'noopener');
+  });
+});
+
 document.querySelectorAll('.share-copy').forEach((btn) => {
   btn.addEventListener('click', () => {
     const url = btn.getAttribute('data-url') || window.location.href;
