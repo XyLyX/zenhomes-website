@@ -211,3 +211,34 @@
   .pl-meta b{ display: inline; }
   .pl-meta b::after{ content: " · "; color: var(--text-dim); }
 }
+
+/* ============================================================
+   SHARE BAR — standard component on every Portfolio Intelligence
+   project page. Sits directly under .byline. New project pages
+   should include this same markup (see any existing project page,
+   e.g. stories-by-mirfa-dubai-south/index.html) so sharing stays
+   consistent site-wide.
+   ============================================================ */
+.share-bar{
+  max-width: 720px; margin: 0 auto 32px; padding: 0 8vw;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.share-label{
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-dim-2); margin-right: 2px;
+}
+.share-btn{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--line-strong); background: var(--white); color: var(--text-dim);
+  cursor: pointer; transition: border-color .25s ease, color .25s ease, background .25s ease;
+  padding: 0;
+}
+.share-btn svg{ width: 15px; height: 15px; fill: currentColor; }
+.share-btn:hover, .share-btn:focus-visible{ border-color: var(--turquoise); color: var(--turquoise-deep); background: var(--turquoise-faint); }
+.share-btn.copied{ border-color: var(--turquoise); color: var(--turquoise-deep); background: var(--turquoise-faint); }
+.share-copy-label{
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; color: var(--turquoise-deep);
+  opacity: 0; transition: opacity .2s ease;
+}
+.share-copy-label.show{ opacity: 1; }

@@ -118,6 +118,37 @@ ${message}`;
   });
 }
 
+// Share bar: copy-link button (LinkedIn/WhatsApp/X are plain share-intent links, no JS needed)
+document.querySelectorAll('.share-copy').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const url = btn.getAttribute('data-url') || window.location.href;
+    const label = btn.querySelector('.share-copy-label');
+    const showCopied = () => {
+      btn.classList.add('copied');
+      if(label){ label.textContent = 'Copied'; label.classList.add('show'); }
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        if(label){ label.classList.remove('show'); }
+      }, 1600);
+    };
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(url).then(showCopied).catch(() => fallbackCopy(url, showCopied));
+    } else {
+      fallbackCopy(url, showCopied);
+    }
+  });
+});
+function fallbackCopy(text, done){
+  const temp = document.createElement('textarea');
+  temp.value = text;
+  temp.style.position = 'fixed';
+  temp.style.opacity = '0';
+  document.body.appendChild(temp);
+  temp.select();
+  try { document.execCommand('copy'); done(); } catch(e) {}
+  document.body.removeChild(temp);
+}
+
 // Newsletter form: submits natively to Netlify Forms, same as the contact form, and shows
 // an inline confirmation instead of navigating away to Netlify's default success page.
 const newsletterForm = document.getElementById('newsletterForm');
