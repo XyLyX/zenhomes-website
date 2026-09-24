@@ -199,11 +199,22 @@ h1 em{ font-style: normal; font-weight: 700; color: var(--turquoise-deep); }
 header.page-hero{
   background: var(--cream);
   color: var(--ink);
-  padding-top: 170px;
-  padding-bottom: 76px;
+  padding-top: 124px;
+  padding-bottom: 44px;
 }
 header.page-hero h1{ font-size: clamp(30px, 4.6vw, 48px); }
 header.page-hero .lede{ color: var(--text-dim); max-width: 620px; margin-top: 20px; }
+
+/* A <section> immediately after the page hero (Portfolio, Insights hub,
+   Leasing) would otherwise stack its own full generic section padding
+   (100px, see the shared `section{...}` rule) on top of the hero's own
+   bottom padding, doubling up into a much bigger gap than the rest of
+   the page's rhythm. Tighten just that one boundary. */
+header.page-hero + section{ padding-top: 32px; }
+@media (max-width: 720px){
+  header.page-hero{ padding-top: 100px; padding-bottom: 36px; }
+  header.page-hero + section{ padding-top: 24px; }
+}
 
 /* ---------- THESIS / generic section ---------- */
 .thesis{ background: var(--white); text-align:center; display:flex; flex-direction:column; align-items:center; }
