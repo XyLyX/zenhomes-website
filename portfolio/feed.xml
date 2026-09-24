@@ -6,7 +6,14 @@
     <description>Publicly presented property opportunities and portfolio publications from Zen Homes, a private property advisory for Dubai and UAE real estate.</description>
     <language>en</language>
     <atom:link href="https://zenhomesglobal.com/portfolio/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 24 Sep 2026 11:57:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 14:07:43 +0000</lastBuildDate>
+    <item>
+      <title>Yas Riva Reserve by Aldar</title>
+      <link>https://zenhomesglobal.com/yas-riva-reserve-yas-island/</link>
+      <guid isPermaLink="true">https://zenhomesglobal.com/yas-riva-reserve-yas-island/</guid>
+      <pubDate>Thu, 24 Sep 2026 09:00:00 +0400</pubDate>
+      <description>292 gated villas on Yas Island&apos;s northeast waterfront — only 45 on the water, each with a private pontoon option.</description>
+    </item>
     <item>
       <title>Maldives Waterfront &amp; Marina</title>
       <link>https://zenhomesglobal.com/maldives-waterfront-marina-ras-male/</link>
@@ -40,8 +47,6 @@
       <guid isPermaLink="true">https://zenhomesglobal.com/alva-the-valley/</guid>
       <pubDate>Thu, 03 Sep 2026 09:00:00 +0400</pubDate>
       <description>A limited release of ~196 low-density townhouses at the E66/E77 corner of The Valley — generous plots, private gardens, and Emaar&apos;s standard freehold terms.</description>
-      <enclosure url="https://zenhomesglobal.com/alva-the-valley/img/hero.jpg" length="315275" type="image/jpeg"/>
-      <media:content url="https://zenhomesglobal.com/alva-the-valley/img/hero.jpg" type="image/jpeg" medium="image"/>
     </item>
     <item>
       <title>Nawayef West B by Modon</title>
