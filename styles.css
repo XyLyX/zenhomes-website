@@ -201,6 +201,8 @@ header.page-hero{
   color: var(--ink);
   padding-top: 124px;
   padding-bottom: 44px;
+  padding-left: max(8vw, calc((100% - 780px) / 2));
+  padding-right: max(8vw, calc((100% - 780px) / 2));
 }
 header.page-hero h1{ font-size: clamp(30px, 4.6vw, 48px); }
 header.page-hero .lede{ color: var(--text-dim); max-width: 620px; margin-top: 20px; }

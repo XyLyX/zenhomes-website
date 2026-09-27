@@ -14,8 +14,12 @@
 
 .insight-hero .lede{ max-width: 680px; }
 
+/* Shared reading-column alignment. header.page-hero (styles.css) uses the
+   same max(8vw, calc((100% - 780px)/2)) formula for its side padding, so
+   every one of these body sections lines its left edge up with the page
+   heading at any viewport width, including mobile, without a wrapper div. */
 .crumb{
-  max-width: 720px; margin: 0 auto; padding: 40px 8vw 0;
+  padding: 40px max(8vw, calc((100% - 780px) / 2)) 0;
   font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
   text-transform: uppercase; color: var(--text-dim);
 }
@@ -23,14 +27,14 @@
 .crumb a:hover{ color: var(--turquoise-deep); }
 
 .byline{
-  max-width: 720px; margin: 0 auto 28px; padding: 0 8vw;
+  padding: 0 max(8vw, calc((100% - 780px) / 2)) 28px;
   font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
   color: var(--text-dim);
 }
 .byline strong{ color: var(--ink); font-weight: 500; }
 
 .insight-body{
-  max-width: 720px; margin: 0 auto; padding: 40px 8vw 20px; background: var(--cream);
+  padding: 40px max(8vw, calc((100% - 780px) / 2)) 20px; background: var(--cream);
   font-size: 16px; line-height: 1.8; color: var(--ink);
 }
 .insight-body h2{
@@ -64,7 +68,7 @@
 
 /* mid-article advisory note (echoes .listings-note) */
 .insight-note{
-  max-width: 720px; margin: 32px auto; padding: 24px 28px;
+  margin: 32px max(8vw, calc((100% - 780px) / 2)); padding: 24px 28px;
   border-left: 2px solid var(--turquoise-deep); background: var(--turquoise-faint);
   font-size: 14.5px; line-height: 1.75; color: var(--text-dim);
 }
@@ -93,7 +97,7 @@
 }
 
 /* related guides */
-.related-wrap{ max-width: 720px; margin: 0 auto; padding: 20px 8vw 60px; }
+.related-wrap{ padding: 20px max(8vw, calc((100% - 780px) / 2)) 60px; }
 .related-wrap .eyebrow{ text-align: left; }
 .related-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 8px; }
 .related-card{
@@ -108,14 +112,14 @@
 .related-title{ font-family: var(--display); font-size: 16px; color: var(--ink); }
 
 /* faq */
-.faq-section{ max-width: 720px; margin: 0 auto; padding: 0 8vw 20px; }
+.faq-section{ padding: 0 max(8vw, calc((100% - 780px) / 2)) 20px; }
 .faq-section .eyebrow{ text-align: left; }
 .faq-section h3{ font-family: var(--display); font-size: 17px; font-weight: 500; margin: 26px 0 8px; color: var(--ink); }
 .faq-section p{ font-size: 14.5px; color: var(--text-dim); line-height: 1.75; }
 
 /* disclaimer */
 .disclaimer{
-  max-width: 720px; margin: 0 auto; padding: 24px 8vw 50px; font-size: 12.5px;
+  padding: 24px max(8vw, calc((100% - 780px) / 2)) 50px; font-size: 12.5px;
   line-height: 1.75; color: var(--text-dim); border-top: 1px solid var(--turquoise-faint); margin-top: 20px; padding-top: 24px;
 }
 
@@ -220,7 +224,7 @@
    consistent site-wide.
    ============================================================ */
 .share-bar{
-  max-width: 720px; margin: 0 auto 32px; padding: 0 8vw;
+  margin: 0 0 32px; padding: 0 max(8vw, calc((100% - 780px) / 2));
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
 }
 .share-label{
